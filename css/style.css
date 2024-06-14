@@ -1,0 +1,384 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root{
+    --primary-color: rgb(232, 17, 15);
+    --secondary-color: #8a1312;
+    --tertiary-color: #000000;
+      
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-content: center;
+    display: block;
+}
+
+/* ----------------- HEADER ----------------- */
+
+header .header-design {
+    position: fixed;
+    width: 100%;
+    height:70px;
+    background: url(../img/nav-background.svg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    filter: drop-shadow(rgb(0, 0, 0) .1rem .3rem 10px);
+    opacity: .9;
+    z-index: 10;
+   
+}
+
+
+
+header .header-design .logo img{
+
+   width: 200px;
+   height: auto;
+   margin-top: 1vh;  
+   margin-left: 2vh;  
+   cursor: pointer;
+}
+
+header .header-design .logo img:hover{
+
+    filter: drop-shadow(rgb(255, 255, 255) .1rem .3rem 10px);
+    transition: .5s;
+ }
+
+/* header .header-design nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    list-style: none;
+    transform: translateX(-50px);
+    
+} */
+
+
+/* ----------------- NAVBAR -----------------  */
+
+.navbar{
+    padding-right: 50px;
+}
+
+header .header-design nav ul li{
+    display: inline-block;
+    transform: translateY(-5px);
+    
+   
+    
+}   
+
+.navbar a{
+    position: relative;
+    display: block;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: 1.3rem;
+   font-weight: 800;
+   color: #fff;
+   cursor: pointer;
+   margin: 0 15px;
+   z-index: 1;
+
+}
+
+.navbar a,
+.navbar a::after,
+.navbar a::before{
+    transition: all .5s;
+}   
+
+.navbar a:hover{
+    color: var(--secondary-color);
+    
+}  
+
+/* STROKE UNDERLINE */
+/* .navbar a::after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+ 
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: var(--secondary-color);
+  height: 3px;
+}
+
+.navbar a:hover::after{
+    width: 100%;
+} */
+
+
+/* SHIFT NAVBAR HOVER */
+
+.navbar a::after{
+    display: block;
+  position: absolute;
+  top: 0;
+  left: -5px;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  padding-left: 10px;
+  
+  width: 100%;
+  height: 1px;
+  content: '.';
+  color: transparent;
+  background: #F1C40F;
+    border-radius: 4px;
+
+
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+
+.navbar a:hover::after{
+    visibility: visible;
+    opacity: 1;
+    height: 5vh;
+    
+}   
+
+
+/* ----------------- PRINCIPAL SECTION -----------------  */
+
+section .banner{
+    width: 100vh;
+    height: 100vh;
+    
+}
+
+.banner .banner-container-bg{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/banner-bg.png) no-repeat;
+
+    background-size: cover;
+    background-position: center;
+    /* transform: scaleX(-1); */
+    z-index: -2;
+
+}
+
+/* ----------------- SUBJECT -----------------  */
+
+.banner-container-subject img{
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    right: 5rem;
+    bottom: 0;
+  
+}
+
+
+
+
+
+
+
+/* ----------------- TRAILER -----------------  */
+
+
+.banner .banner-post{
+    position: absolute;
+    left: 2rem;
+    top: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: auto;
+    max-width: 250px;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(227,228,237,0.37);
+    border: 3px solid rgba(255, 255, 255, 0.18);
+    
+}
+
+.banner .banner-post .logo-banner img{
+    width: 100% ;
+    height: auto;
+}
+
+.banner .banner-post .info-banner {
+    list-style: none;
+    text-decoration: none;
+    text-align: justify;
+    padding: 0;
+    display: block;
+    height: auto;
+    transform: translateY(-20px);
+    font-size: 1.1rem;
+    font-weight: 100;
+    color: azure;
+    
+}
+
+.banner-post .info-banner .op-reserva,
+.banner-post .info-banner .op-trailer
+{
+    display: block;
+    align-items: center;
+    text-align: center;
+    /* width: 100%; */
+    margin: auto;
+    padding-bottom: 1rem;
+ 
+}
+
+.banner-post .info-banner .op-reserva{
+    transform: translateY(21px);
+}
+
+.banner-post .info-banner .op-trailer a{
+    
+    text-decoration: none;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+ 
+}
+
+.banner-post .info-banner .op-trailer a::before{
+    display: block;
+    position: relative;
+    left: 24%;
+    top: 25px;
+    content: '';
+    width: 125px;
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    opacity: .5;
+    z-index: 101;
+  
+}
+
+
+.banner-post .info-banner .op-trailer a::after{
+    display: block;
+    position: relative;
+    left: 24%;
+    content: '';
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    opacity: 0;
+    z-index: 101;
+   
+}
+
+@keyframes slide-trailer{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 125px;
+    }
+}
+
+.banner-post .info-banner .op-trailer a:hover::after{
+    visibility: visible;
+    opacity: 1;
+    animation: slide-trailer .5s forwards;
+       
+}   
+
+/* -------------- ANIMATION RESERVA ------------ */
+
+.banner-post .info-banner .op-reserva a{
+    
+    text-decoration: none;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+     
+}
+
+.banner-post .info-banner .op-reserva a::before{
+    display: block;
+    position: absolute;
+    top: -13px;
+    left: 10%;
+    content: '';
+    min-width: 200px;
+    height: 50px;
+    background: var(--primary-color);
+    border-radius: 4px;
+    border: 1px solid hsla(0, 0%, 100%, .5);
+    box-shadow: 0 0 0 3px rgb(232, 17, 15), inset 0 0 0 0 #202020, 0 0 0 0 rgba(0, 0, 0, .8);
+    
+    z-index: -1;
+  
+}
+
+
+.banner-post .info-banner .op-reserva a:hover::after{
+    display: block;
+    position: absolute;
+    top: -13px;
+    left: 10%;
+    content: '';
+    
+    height: 50px;
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
+    border: 1px solid hsla(0, 0%, 100%, .3);
+    animation: slide-reserva .5s forwards;
+    opacity: .1;
+    z-index: 1;
+  
+}
+
+@keyframes slide-reserva{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 200px;
+    }
+}
+
+/* .banner-post .info-banner .op-trailer a:hover::after{
+    visibility: visible;
+    opacity: 1;
+    animation: slide-trailer 1s forwards;
+       
+}    */
+
+
+
+
+
+
+section .banner2{
+    width: 100vh;
+    height: 100vh;
+}
+
+.banner2 .banner-content2{
+    width: 100%;
+    height: 100vh;
+    background-color: blue;
+}
